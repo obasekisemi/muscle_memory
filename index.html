@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muscle Memory - Learn Anything Through Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Manrope', sans-serif;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background: 
+                radial-gradient(circle at top right, rgba(99, 102, 241, 0.06), transparent 50%),
+                radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.06), transparent 50%),
+                linear-gradient(to bottom, #fafafa, #ffffff);
+            min-height: 100vh;
+        }
+
+        .feature-card {
+            transition: all 300ms ease;
+            cursor: pointer;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen">
+        <!-- Navigation -->
+        <nav class="px-6 py-4 bg-white/80 backdrop-blur-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">Muscle Memory</span>
+                </div>
+                <div class="hidden md:flex gap-6">
+                    <a href="#features" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Features</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">How It Works</a>
+                    <a href="./prompt-generator.html" class="text-gray-600 hover:text-indigo-600 font-medium transition-colors">Generate Questions</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="px-6 py-20 md:py-32">
+            <div class="max-w-6xl mx-auto text-center">
+                <div class="mb-8 inline-block">
+                    <div class="float-animation">
+                        <div class="w-24 h-24 bg-gradient-to-br from-indigo-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-xl mx-auto">
+                            <svg class="w-14 h-14 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-6 leading-tight">
+                    Build <span class="gradient-text">Muscle Memory</span><br/>Through Practice
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Transform any textbook, research paper, or study material into interactive quizzes. 
+                    Learn faster, retain longer, and master any subject through active recall.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="./quiz.html" class="px-8 py-4 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl hover:from-indigo-600 hover:to-indigo-700 transition-all">
+                        Start Quiz
+                    </a>
+                    <a href="./prompt-generator.html" class="px-8 py-4 bg-white border-2 border-indigo-500 text-indigo-600 rounded-xl font-semibold text-lg hover:bg-indigo-50 transition-all">
+                        Generate Questions
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="px-6 py-20 bg-white/40">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-4">
+                    Why Muscle Memory?
+                </h2>
+                <p class="text-center text-gray-600 text-lg mb-16 max-w-2xl mx-auto">
+                    Active recall is proven to be the most effective learning method. We make it effortless.
+                </p>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                        <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">AI-Powered Generation</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Use any LLM to convert your study materials into perfectly formatted questions. No coding required.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                        <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Zero Setup</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            No APIs, no databases, no complicated setup. Just paste your questions and start learning immediately.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                        <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Randomized Practice</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Questions are shuffled each time for better retention. Build real understanding, not memorization.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="px-6 py-20">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-4">
+                    How It Works
+                </h2>
+                <p class="text-center text-gray-600 text-lg mb-16 max-w-2xl mx-auto">
+                    Three simple steps to transform any material into practice questions
+                </p>
+
+                <div class="space-y-8">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row gap-6 items-center">
+                        <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                            1
+                        </div>
+                        <div class="flex-1 bg-white rounded-2xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Customize Your Prompt</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Visit our <a href="./prompt-generator.html" class="text-indigo-600 font-semibold hover:underline">Prompt Generator</a>, 
+                                set your difficulty level and number of questions, then paste your study material (textbook chapter, notes, research paper).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row gap-6 items-center">
+                        <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                            2
+                        </div>
+                        <div class="flex-1 bg-white rounded-2xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Generate with Any LLM</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Copy the complete prompt and paste it into ChatGPT, Claude, Gemini, or any LLM. 
+                                The AI will generate perfectly formatted questions ready to use.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row gap-6 items-center">
+                        <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                            3
+                        </div>
+                        <div class="flex-1 bg-white rounded-2xl p-8 shadow-lg">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-3">Load & Practice</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Copy the JSON output from the LLM, paste it into Muscle Memory, and start your quiz. 
+                                Questions are randomized and tracked for optimal learning.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="px-6 py-20 bg-gradient-to-r from-indigo-500 to-emerald-500">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Ready to Build Your Muscle Memory?
+                </h2>
+                <p class="text-xl text-indigo-100 mb-8">
+                    Start learning smarter, not harder. Transform your study materials today.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="./prompt-generator.html" class="px-8 py-4 bg-white text-indigo-600 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all">
+                        Generate Your First Quiz
+                    </a>
+                    <a href="./quiz.html" class="px-8 py-4 bg-indigo-700 text-white rounded-xl font-semibold text-lg border-2 border-white/30 hover:bg-indigo-800 transition-all">
+                        Try Sample Quiz
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="px-6 py-12 bg-gray-900 text-gray-400">
+            <div class="max-w-6xl mx-auto text-center">
+                <div class="flex items-center justify-center gap-3 mb-4">
+                    <div class="w-8 h-8 bg-gradient-to-br from-indigo-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-white">Muscle Memory</span>
+                </div>
+                <p class="text-sm">
+                    Learn anything through active recall and spaced repetition.
+                </p>
+                <p class="text-sm mt-2">
+                    © 2025 Muscle Memory. No data stored, no tracking, completely private.
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
